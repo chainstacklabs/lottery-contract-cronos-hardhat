@@ -51,7 +51,7 @@ touch .env
 Configure it along the following lines:
 
 ```bash
-RPC_URL=CHAINSTACK_GOERLI_NODE_URL
+RPC_URL=CHAINSTACK_CRONOS_NODE_URL
 PRIVATE_KEY=YOUR_PRIVATE_KEY
 API_KEY=CRONOSCAN_API_KEY(to verify the smart contract)
 ```
@@ -67,9 +67,33 @@ source .env
 npx hardhat compile
 ```
 
-### Configuring hardhat.config
+### Testing in Hardhat
 
-Install some additional plugins like this:
+Run this command to start a local Hardhat node in your terminal:
 
+```bash
+npx hardhat node
+```
+Run the tests on your local node with:
 
+```bash
+npx hardhat test --network localhost
+```
 
+### Deploy and verify
+
+You already have the deploy script setup in scripts/DeployDutch.js. To dpeloy on Cronos testnet, simply run:
+
+```bash
+npx hardhat run --network Cronos_testnet scripts/deploy.js
+```
+
+To verify:
+
+```bash
+npx hardhat verify --network Cronos_testnet {Contract Address}
+```
+
+## Conclusion
+
+You now have a deployed and verified smart contract on the Cronos Testnet. Feel free to create your own project from scratch by following along with our blog, linked above.
