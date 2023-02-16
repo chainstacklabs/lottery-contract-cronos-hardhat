@@ -23,5 +23,53 @@
 # Lottery smart contract on Cronos blockchain
 
 In this tutorial, you will learn how to build a lottery smart contract using Solidity, and how to deploy and verify smart contracts on the Cronos blockchain using Hardhat.
-This repo serves as the codebase for you to be able to follow along comfortably with the written tutorial on [Chainstack's blog](https://chainstack.com/lottery-smart-contract-on-cronos-blockchain/ "Chainstack's blog").
+This repo serves as the codebase for you to be able to follow along comfortably with the written tutorial on Chainstack's blog:
+
+- [Lottery smart contract on Cronos blockchain](https://chainstack.com/lottery-smart-contract-on-cronos-blockchain/ "Lottery smart contract on Cronos blockchain")
+
+## Project details
+
+Cronos is an EVM-compatible layer 1 blockchain, equipped with the unique Inter Blockchain Communications (IBC) protocol powered by the Cosmos SDK. This gives Cronos interoperability between Cosmos and EVM ecosystems.
+
+In this project you will be create, test, deploy and verify a Lottery smart contract on the Cronos Testnet straight from Hardhat's command line.
+
+## Quick Start
+
+Clone this repository.
+
+### Install project-level dependencies:
+```bash
+npm install
+```
+
+### Setting up dotenv file
+
+Run this command at the root of oyur terminal to create a dotenv file:
+```bash
+touch .env
+```
+Configure it along the following lines:
+
+```bash
+RPC_URL=CHAINSTACK_GOERLI_NODE_URL
+PRIVATE_KEY=YOUR_PRIVATE_KEY
+API_KEY=CRONOSCAN_API_KEY(to verify the smart contract)
+```
+Save the dotenv file and run this command in your terminal:
+
+```bash
+source .env
+```
+
+
+### Compile smart contract
+```bash
+npx hardhat compile
+```
+
+### Configuring hardhat.config
+
+Install some additional plugins like this:
+
+
 
