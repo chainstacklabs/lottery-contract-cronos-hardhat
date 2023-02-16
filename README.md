@@ -85,7 +85,7 @@ npx hardhat test --network localhost
 You already have the deploy script setup in scripts/DeployDutch.js. To dpeloy on Cronos testnet, simply run:
 
 ```bash
-npx hardhat run --network Cronos_testnet scripts/deploy.js
+npx hardhat run --network Cronos_testnet scripts/DeployDutch.js
 ```
 
 To verify:
